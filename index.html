@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-  <meta name="description" content="Hiperfoco: 20 capítulos para transformar sua mente e sua vida em apenas 10 minutos por dia.">
-  <meta property="og:title" content="Hiperfoco – 20 Capítulos. 10 Minutos por Dia. A Mudança que Você Esperava.">
   <meta name="theme-color" content="#001122" />
-  <title>Hiperfoco – 20 Capítulos. 10 Minutos por Dia.</title>
-  <link rel="icon" href="https://emojiapi.dev/api/v1/fire/64.png" />
+  <meta name="description" content="Hiperboot: Robô de Vendas via WhatsApp com Entrega e Pagamento Automatizados" />
+  <title>Hiperboot – Seu Robô de Vendas 24h</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
@@ -20,68 +17,42 @@
       line-height: 1.6;
       scroll-behavior: smooth;
     }
-
     header {
       padding: 2rem 1rem 1rem;
       text-align: center;
     }
-
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
       color: #66ccff;
       margin: 0;
-      text-shadow: 0 0 12px #3399ffcc;
+      text-shadow: 0 0 20px #66ccff, 0 0 30px #3399ff;
       font-weight: 700;
+      letter-spacing: 1px;
     }
-
-    header p {
-      font-size: 1.2rem;
-      color: #99ccff;
-      margin-top: 0.5rem;
-      text-shadow: 0 0 8px #3399ff99;
-      font-weight: 600;
-    }
-
-    .audio-controls {
-      margin-top: 1rem;
-    }
-
-    .audio-button {
-      background: rgba(102, 204, 255, 0.1);
+    .highlight-box {
+      margin: 1.5rem auto;
+      max-width: 600px;
+      padding: 1.5rem;
+      background: rgba(0,0,0,0.4);
       border: 2px solid #66ccff;
-      color: #66ccff;
-      padding: 0.6rem 1.2rem;
-      margin: 0.5rem;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      box-shadow: 0 0 12px #3399ff;
     }
-
-    .audio-button:hover {
-      background: #66ccff;
-      color: #001122;
-      transform: scale(1.05);
+    .highlight-box p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #bbddff;
+      margin: 0;
     }
-
-    #trackName {
-      margin-top: 0.5rem;
-      color: #aaccee;
-      font-size: 0.95rem;
-    }
-
     .section {
       padding: 2rem 1.5rem 3rem;
-      max-width: 800px;
-      margin: 1rem auto;
+      max-width: 850px;
+      margin: 1.5rem auto;
       border: 2px solid #66ccff;
       border-radius: 16px;
       background: rgba(0, 17, 34, 0.6);
       box-shadow: 0 0 30px #66ccff, 0 0 60px #3399ffaa;
     }
-
     .section h2 {
       color: #66ccff;
       font-size: 1.8rem;
@@ -89,23 +60,48 @@
       text-shadow: 0 0 5px #3399ff;
       font-weight: 700;
     }
-
-    .quote {
-      font-style: italic;
-      color: #aaccee;
-      margin: 2rem 0;
-    }
-
     ul {
       list-style: none;
       padding-left: 1rem;
     }
-
     li::before {
-      content: "✓ ";
+      content: "\2713 ";
       color: #66ccff;
+      margin-right: 5px;
     }
-
+    .whatsapp-btn {
+      background: #25ff75;
+      border-color: #25ff75;
+      color: #001122;
+      font-size: 1.4rem;
+      padding: 1.2rem 2.5rem;
+      border-radius: 14px;
+      box-shadow: 0 0 25px #25ff75cc;
+      transition: all 0.3s ease;
+      display: block;
+      text-align: center;
+      max-width: 400px;
+      margin: 2.5rem auto;
+    }
+    .whatsapp-btn:hover {
+      background: #001122;
+      color: #25ff75;
+      box-shadow: 0 0 35px #25ff75;
+      transform: scale(1.07);
+    }
+    .vip-benefits {
+      background: rgba(0, 18, 34, 0.8);
+      border-radius: 12px;
+      padding: 2rem;
+      color: #bbddff;
+      box-shadow: 0 0 10px #3399ff;
+      margin-top: 2rem;
+    }
+    .vip-benefits h3 {
+      color: #66ccff;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -113,198 +109,98 @@
       color: #88aabb;
       text-shadow: 0 0 5px #3399ff88;
     }
-
-    .access-link {
-      display: inline-block;
-      background: rgba(102, 204, 255, 0.1);
-      color: #66ccff;
-      padding: 1rem 2rem;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border: 2px solid #66ccff;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #66ccffcc;
-      transition: all 0.3s ease;
-      margin-top: 3rem;
-    }
-
-    .access-link:hover {
-      background: #66ccff;
-      color: #001122;
-      transform: scale(1.05);
-    }
-
-    .vip-benefits {
-      background: rgba(0, 18, 34, 0.8);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 3rem;
-      color: #bbddff;
-      box-shadow: 0 0 10px #3399ff;
-    }
-
-    .vip-benefits h3 {
-      color: #66ccff;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .vip-benefits li::before {
-      content: "✔️ ";
-      color: #66ccff;
-    }
-
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1.2s ease-out, transform 1.2s ease-out;
     }
-
     .fade-in.appear {
       opacity: 1;
       transform: translateY(0);
     }
-
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .section h2 {
-        font-size: 1.4rem;
-      }
-      .access-link {
-        font-size: 1rem;
-        padding: 0.8rem 1.2rem;
+      header h1 { font-size: 2rem; }
+      .section h2 { font-size: 1.4rem; }
+      .whatsapp-btn {
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-
-<header class="fade-in">
-  <h1>Hiperfoco</h1>
-  <p>10 minutos por dia que podem transformar sua mente, seu foco e sua vida.</p>
-
-  <div class="audio-controls fade-in">
-    <button id="audioControl" class="audio-button">Ativar Trilha Sonora 🎧</button>
-    <button id="nextTrack" class="audio-button">⏭️ Próxima Faixa</button>
-    <div id="trackName"></div>
-    <audio id="bgAudio" preload="auto" loop></audio>
-  </div>
-</header>
-
-<div class="section fade-in">
-  <h2>📘 20 Capítulos.</h2>
-  <p>Este não é apenas um Ebook. É um método para transformar sua forma de viver, pensar e agir.</p>
-  <p class="quote">"A vida que você vive é o reflexo dos pensamentos que você cultiva."<br>— James Allen</p>
-
-  <h2>🎧 Trilha Sonora do Foco</h2>
-  <p>Ative o som enquanto lê. Frequências que aumentam seu estado de presença e clareza mental.</p>
-
-  <h2>📘 O que você recebe:</h2>
-  <ul>
-    <li>20 capítulos transformadores</li>
-    <li>Exercícios mentais diários</li>
-    <li>Áudios com frequências mentais</li>
-    <li>Frases que despertam ação</li>
-    <li>Acesso ao Grupo VIP</li>
-  </ul>
-
-  <div class="vip-benefits">
-    <h3>Benefícios Exclusivos do Grupo VIP</h3>
+  <header class="fade-in">
+    <h1>🤖 Hiperboot 📱</h1>
+    <div class="highlight-box">
+      <p>Enquanto você vive sua vida, o Hiperboot cuida das vendas, pagamentos e entregas. Tudo automático.</p>
+    </div>
+  </header>  <div class="section fade-in">
+    <h2>🧠 O Que é o Hiperboot?</h2>
+    <p>É um robô inteligente que transforma seu WhatsApp em uma central de vendas totalmente automatizada. Ele atende, vende, recebe pagamentos e entrega produtos — tudo sozinho, sem depender de você.</p>
+  </div>  <div class="section fade-in">
+    <h2>🚀 Benefícios do Hiperboot</h2>
     <ul>
-      <li>Acesso a livros em PDF</li>
-      <li>Audiobooks completos</li>
-      <li>Temas avançados sobre foco</li>
-      <li>Comunidade ativa para crescimento</li>
-      <li>Exercícios exclusivos</li>
-      <li>Assine o próximo capítulo com seu nome como coautor</li>
+      <li>🤖 Atendimento automático e instantâneo via WhatsApp</li>
+      <li>💰 Geração de links de pagamento por Pix e cartão</li>
+      <li>🔎 Validação automática de comprovantes via API bancária</li>
+      <li>📦 Entrega digital automática ou chamada de entregador físico</li>
+      <li>🙵️ Integração com motoboy/Uber com endereço automático</li>
+      <li>📊 Painel de controle com status atualizado em tempo real</li>
+      <li>⏱️ Funciona 24 horas por dia, 7 dias por semana</li>
+      <li>🧠 Elimina erros humanos e reduz custos com atendimento</li>
+      <li>📈 Aumenta suas vendas com agilidade e automação</li>
     </ul>
-  </div>
+  </div>  <div class="section fade-in">
+    <h2>🏢 Grandes Empresas Já Usam Bots</h2>
+    <p>As maiores empresas do Brasil antes precisavam de 30 pessoas para realizar o que hoje um único sistema automatizado faz sozinho. E você também pode.</p>
+    <ul>
+      <li>📱 iFood – Atendimentos via robôs para pedidos, suporte e entregas</li>
+      <li>🏦 Nubank – Assistentes virtuais para suporte financeiro 24h</li>
+      <li>🚗 99 – Integração de bots para corridas e suporte ao cliente</li>
+      <li>📦 Magazine Luiza – Atendimento automatizado via Lu, a assistente virtual</li>
+      <li>💊 Drogasil e Raia – Resposta automatizada por WhatsApp para clientes</li>
+    </ul>
+  </div>  <div class="section fade-in">
+    <h2>🛋️ Escolha seu Pacote Ideal</h2>
+    <div class="vip-benefits">
+      <h3>🔹 Pacote Padrão</h3>
+      <ul>
+        <li>Uso completo do sistema Hiperboot</li>
+        <li>Automação de vendas via WhatsApp</li>
+        <li>Geração de pagamentos e entregas</li>
+        <li>Suporte básico e atualizações mensais</li>
+      </ul>
+    </div>
+    <div class="vip-benefits" style="border: 2px solid gold; background: rgba(30, 20, 10, 0.4);">
+      <h3>👑 Pacote VIP</h3>
+      <ul>
+        <li>Todos os recursos do padrão</li>
+        <li>Automação completa de WhatsApp com respostas humanizadas por IA</li>
+        <li>Atualizações semanais personalizadas</li>
+        <li>Consultoria e melhorias sob demanda</li>
+      </ul>
+      <p style="margin-top: 1rem; font-weight: bold; color: #ffd700;">
+        Ideal para quem quer crescer com o criador do sistema ao lado.
+      </p>
+    </div>
+  </div><a href="https://wa.me/5555996043937?text=Ol%C3%A1%2C%20quero%20meu%20WhatsApp%20com%20Hiperboot." class="whatsapp-btn" target="_blank" rel="noopener noreferrer"
 
-  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link" rel="noopener noreferrer">
-    👉 Acesse o conteúdo aqui!
-  </a>
-</div>
+> 
 
-<footer class="fade-in">
-  © 2025 Projeto Hiperfoco. Todos os direitos reservados.
-</footer>
+💬 Quero meu WhatsApp com Hiperboot
 
-<script>
-  const audio = document.getElementById('bgAudio');
-  const playBtn = document.getElementById('audioControl');
-  const nextBtn = document.getElementById('nextTrack');
-  const trackName = document.getElementById('trackName');
-
-  const tracks = [
-    { name: 'Frequência Alfa', file: 'audio1.mp3' },
-    { name: 'Foco Profundo', file: 'audio2.mp3' },
-    { name: 'Clareza Mental', file: 'audio3.mp3' },
-    { name: 'Relaxamento Produtivo', file: 'audio4.mp3' },
-    { name: 'Ressonância Criativa', file: 'audio5.mp3' }
-  ];
-
-  let isPlaying = false;
-  let currentTrack = 0;
-
-  function loadAndPlayTrack(index) {
-    if (index < 0 || index >= tracks.length) return;
-    currentTrack = index;
-    audio.src = tracks[currentTrack].file;
-    trackName.textContent = `🎵 Tocando agora: ${tracks[currentTrack].name}`;
-    audio.play();
-    isPlaying = true;
-    playBtn.textContent = 'Parar Trilha Sonora ⏸️';
-  }
-
-  playBtn.addEventListener('click', () => {
-    if (!isPlaying) {
-      loadAndPlayTrack(currentTrack);
-    } else {
-      audio.pause();
-      isPlaying = false;
-      playBtn.textContent = 'Ativar Trilha Sonora 🎧';
-      trackName.textContent = '';
-    }
-  });
-
-  nextBtn.addEventListener('click', () => {
-    let nextIndex = currentTrack + 1;
-    if (nextIndex >= tracks.length) nextIndex = 0;
-    loadAndPlayTrack(nextIndex);
-  });
-
-  const prevBtn = document.createElement('button');
-  prevBtn.className = 'audio-button';
-  prevBtn.textContent = '⏮️ Faixa Anterior';
-  prevBtn.addEventListener('click', () => {
-    let prevIndex = currentTrack - 1;
-    if (prevIndex < 0) prevIndex = tracks.length - 1;
-    loadAndPlayTrack(prevIndex);
-  });
-
-  nextBtn.parentNode.insertBefore(prevBtn, nextBtn);
-
-  audio.addEventListener('ended', () => {
-    let nextIndex = currentTrack + 1;
-    if (nextIndex >= tracks.length) nextIndex = 0;
-    loadAndPlayTrack(nextIndex);
-  });
-
-  const fadeIns = document.querySelectorAll('.fade-in');
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeIns.forEach(el => appearOnScroll.observe(el));
-</script>
-
-</body>
-  </html>
+  </a>  <footer class="fade-in">
+    © 2025 Hiperboot. Todos os direitos reservados.
+  </footer>  <script>
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeIns.forEach(el => appearOnScroll.observe(el));
+  </script></body>
+</html>
