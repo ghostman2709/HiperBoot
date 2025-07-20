@@ -132,15 +132,27 @@
         max-width: 100%;
       }
     }
+
+    /* Estilos para o efeito Fade-in */
+    .fade-in-element {
+      opacity: 0;
+      transform: translateY(20px); /* Começa um pouco abaixo */
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duração e tipo de transição */
+    }
+
+    .fade-in-element.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in-element">
     <h1>HiperBoot 🤖</h1>
     <p class="slogan-header">Sua Automação Inteligente para Vendas e Atendimento 24h.</p>
   </header>
 
-  <div class="fluxo">
+  <div class="fluxo fade-in-element">
     <h2>🚀 Automatize com o HiperBoot em 6 Passos Simples!</h2>
     <ul class="etapas">
       <li>1. <span class="destaque">Conexão Instantânea:</span> Seu cliente inicia a conversa via WhatsApp, a qualquer hora.</li>
@@ -157,7 +169,7 @@
     </ul>
   </div>
 
-  <div class="fluxo">
+  <div class="fluxo fade-in-element">
     <h2>📅 Agendamentos Sem Complicações para o Seu Negócio!</h2>
     <p>Perfeito para profissionais que valorizam cada minuto:</p>
     <ul class="etapas">
@@ -168,7 +180,7 @@
     <p>Com dashboard de horários intuitivo e <span class="destaque">notificações automáticas</span> 1h antes do atendimento, reduzindo faltas e otimizando seu tempo.</p>
   </div>
 
-  <div class="fluxo">
+  <div class="fluxo fade-in-element">
     <h2>🎯 Por Que o HiperBoot é Essencial Para Você?</h2>
     <ul class="etapas">
       <li>✅ **Atendimento 24/7:** Venda e atenda sem parar, mesmo quando você está offline.</li>
@@ -181,7 +193,7 @@
     </ul>
   </div>
 
-  <div class="fluxo">
+  <div class="fluxo fade-in-element">
     <h2>🚀 Não Perca Mais Tempo e Venda Mais Agora!</h2>
     <p>Clique abaixo e fale com um de nossos especialistas para descobrir como o HiperBoot pode revolucionar seu negócio hoje mesmo.</p>
     <p style="text-align: center;">
@@ -189,9 +201,33 @@
     </p>
   </div>
 
-  <footer>
+  <footer class="fade-in-element">
     HiperBoot &copy; 2025 – Soluções inteligentes e automatizadas.
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in-element');
+
+      const observerOptions = {
+        root: null, // Observa a viewport
+        rootMargin: '0px',
+        threshold: 0.1 // 10% do elemento visível para ativar
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Para a observação após a animação
+          }
+        });
+      }, observerOptions);
+
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
 </body>
-  </html>
-  
+</html>
